@@ -1,5 +1,5 @@
 ﻿WpfApp1
-
+1.0.0.0
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\App.xaml
 3-1836217793
 
-17101043569
+19296531265
 192-1533232326
 MainWindow.xaml;Views\Tasks\Create.xaml;Views\Tasks\Index.xaml;
 

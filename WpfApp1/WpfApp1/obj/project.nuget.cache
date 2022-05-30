@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "94Y3N2juv8XAIQy9mYvZeF1/YQJamJQ4UVJNIyiy0vLtaQgrqnFRlbxosoqYQBqkT94kQTmD7Avcx1uapYDC7w==",
+  "dgSpecHash": "6FR2xSLEuUKdbYaP7zuHUzSYUrYU2+y6QfPdJuQaR0L+wQqgE5hUtjClYEYACRppQdG9c57YwlylVP/KtiUg5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Val\\source\\repos\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "projectFilePath": "C:\\Users\\Val\\Documents\\GitHub\\WPF-TaskManager\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Val\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
   ],

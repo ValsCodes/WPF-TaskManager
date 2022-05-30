@@ -10,6 +10,6 @@
         Title="TeskManager" Height="450" Width="800">
  
     <Grid Margin="20 10 0 0 " MaxWidth="600">
-        <views:Create/>
+        <views:Create DataContext="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

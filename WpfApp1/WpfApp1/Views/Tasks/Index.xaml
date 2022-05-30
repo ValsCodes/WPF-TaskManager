@@ -28,21 +28,19 @@
                        FontSize="24"/>
             
             <Button Grid.Column="1"
+                    Command="{Binding NewTask}"
                     Width="75" 
                     Margin="10 10 75 10" 
                     Content="New Task"/>
         </Grid>
 
-        <ListView Grid.Row="1" Margin="0 25 0 0">
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
+        <ListView Grid.Row="1" Margin="0 25 0 0" ItemsSource="{Binding Tasks}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn  Header="Task Id">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="1"/>
+                                <TextBlock Text="{Binding TaskID}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -50,7 +48,7 @@
                     <GridViewColumn  Header="Name">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Vacum"/>
+                                <TextBlock Text="{Binding TaskName}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -58,7 +56,7 @@
                     <GridViewColumn  Header="Date Created">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="12/12/2022"/>
+                                <TextBlock Text="{Binding DateCreated}"/>   <!-- SUS check if date created doesn't func or changes-->
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -66,7 +64,7 @@
                     <GridViewColumn  Header="Description">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Doesn't work"/>
+                                <TextBlock Text="{Binding Description}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -74,7 +72,7 @@
                     <GridViewColumn  Header="Status">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Processing"/>
+                                <TextBlock Text="{Binding Status}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -82,7 +80,7 @@
                     <GridViewColumn  Header="Type">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Technical"/>
+                                <TextBlock Text="{Binding Type}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -90,7 +88,7 @@
                     <GridViewColumn  Header="UserName">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Peter  Petrov"/>
+                                <TextBlock Text="{Binding UserID}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -98,11 +96,12 @@
                     <GridViewColumn  Header="Next Action">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="13/12/2020"/>
+                                <TextBlock Text="{Binding NextAction}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    
+                    <!-- consider removing comments at creation-->
+                    <!--
                     <GridViewColumn  Header="Comments">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -110,7 +109,7 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    
+                    -->
                 </GridView>
             </ListView.View>
         </ListView>

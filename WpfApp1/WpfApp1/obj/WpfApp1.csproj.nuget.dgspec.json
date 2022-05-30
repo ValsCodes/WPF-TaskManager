@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Val\\source\\repos\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {}
+    "C:\\Users\\Val\\Documents\\GitHub\\WPF-TaskManager\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Val\\source\\repos\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {
+    "C:\\Users\\Val\\Documents\\GitHub\\WPF-TaskManager\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Val\\source\\repos\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Val\\Documents\\GitHub\\WPF-TaskManager\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
         "projectName": "WpfApp1",
-        "projectPath": "C:\\Users\\Val\\source\\repos\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+        "projectPath": "C:\\Users\\Val\\Documents\\GitHub\\WPF-TaskManager\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
         "packagesPath": "C:\\Users\\Val\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Val\\source\\repos\\WpfApp1\\WpfApp1\\obj\\",
+        "outputPath": "C:\\Users\\Val\\Documents\\GitHub\\WPF-TaskManager\\WpfApp1\\WpfApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Val\\AppData\\Roaming\\NuGet\\NuGet.Config",

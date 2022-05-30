@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using WpfApp1.Commands;
+using WpfApp1.Models;
 
 namespace WpfApp1.ViewModels
 {
@@ -28,6 +30,13 @@ namespace WpfApp1.ViewModels
             set { _status = value; OnPropertyChanged(nameof(Status)); }
         }
 
+        private string _assigned;
+        public string Assigned
+        {
+            get { return _assigned; }
+            set { _assigned = value; OnPropertyChanged(nameof(Assigned)); }
+        }
+
         private string _type;
         public string Type
         {
@@ -52,9 +61,10 @@ namespace WpfApp1.ViewModels
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public MakeTaskViewModel()
+        public MakeTaskViewModel(TaskManager manager)
         {
-
+            SubmitCommand = new MakeTaskCommand(this, manager);
         }
+
     }
 }

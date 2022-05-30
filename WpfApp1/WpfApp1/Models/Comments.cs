@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WpfApp1.Models
 {
-    class Comments
+    public class Comments
     {
         [Key]
         public string CommentID { get; set; }
