@@ -16,7 +16,7 @@ namespace WpfApp1.Models
 
         public IEnumerable<Task> GetTaskForUser(string username)
         {
-            return _tasks.Where(x => x.UserID == username);
+            return _tasks.Where(x => x.Assigned == username);
         }
 
         public IEnumerable<Task> GetAllTasks()

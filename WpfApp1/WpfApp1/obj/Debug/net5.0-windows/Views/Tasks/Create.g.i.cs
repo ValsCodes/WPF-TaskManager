@@ -53,7 +53,7 @@ namespace WpfApp1.Views.Tasks {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TaskManagerWPF;V1.0.0.0;component/views/tasks/create.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TaskManagerWPF;component/views/tasks/create.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Tasks\Create.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

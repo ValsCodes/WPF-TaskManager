@@ -10,12 +10,11 @@ namespace WpfApp1.DbContexts
 {
     public class TaskmanagerDbContext : DbContext
     {
-        public TaskmanagerDbContext(DbContextOptions<TaskmanagerDbContext> options) : base(options)
+        public TaskmanagerDbContext(DbContextOptions options) : base(options)
         {
 
         }
 
         public DbSet<WpfApp1.Models.Task> Tasks { get; set; }
-        public DbSet<WpfApp1.Models.Comments> Comments { get; set; }
     }
 }

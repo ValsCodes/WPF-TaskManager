@@ -9,17 +9,17 @@ namespace WpfApp1.Models
     {
        // protected static int autoicrementid = 1;
         [Key]
-        public string TaskID { get; set; }
+        public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime DateCreated => DateTime.Now;
         public string Description { get; set; }
         public string Status { get; set; }
         public string Type { get; set; }
-        public string UserID { get; set; }
-        public DateTime NextAction { get; set; }
+        public string Assigned { get; set; }
+        public DateTime NextAction { get; set; } = DateTime.Now;
         public ICollection<Comments> Comments { get; set; }
 
-
+        /*
         public Task(string name, string desc, string status, string type, string userid, DateTime next)
         {
          //   this.TaskID =  autoicrementid++.ToString();
@@ -27,7 +27,7 @@ namespace WpfApp1.Models
             this.Description = desc;
             this.Status = status;
             this.Type = type;
-            this.UserID = userid;
+            this.Assigned = userid;
             this.NextAction = next;
         }
 
@@ -38,11 +38,12 @@ namespace WpfApp1.Models
             this.Description = desc;
             this.Status = status;
             this.Type = type;
-            this.UserID = userid;
+            this.Assigned = userid;
             this.NextAction = next;            
             Comments.Add(comment);
         }
 
+        */
 
         public bool Conflicts(Task task) //doesn't work, allows for identical tasks
         {

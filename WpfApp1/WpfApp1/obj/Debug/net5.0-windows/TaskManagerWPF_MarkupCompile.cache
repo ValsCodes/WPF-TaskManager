@@ -5,16 +5,16 @@ winexe
 C#
 .cs
 C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\
-WpfApp1_uzt21nxc_wpftmp
+WpfApp1
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\App.xaml
 3-1836217793
 
-26-809267829
+25-1623626527
 331-164628946
 MainWindow.xaml;Views\Tasks\Create.xaml;Views\Tasks\Index.xaml;
 
-True
+False
 
