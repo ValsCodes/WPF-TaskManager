@@ -35,6 +35,7 @@
         </Grid>
 
         <ListView Grid.Row="1" Margin="0 25 0 0" ItemsSource="{Binding Tasks}">
+            <ListView/>
             <ListView.View>
                 <GridView>
                     <GridViewColumn  Header="Task Id">

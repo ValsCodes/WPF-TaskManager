@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WpfApp1.Migrations
 {
-    public partial class mig8 : Migration
+    public partial class mig13 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,6 +14,7 @@ namespace WpfApp1.Migrations
                     TaskID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TaskName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -30,26 +31,26 @@ namespace WpfApp1.Migrations
                 columns: table => new
                 {
                     CommentID = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    TaskID = table.Column<int>(type: "int", nullable: false),
                     UserID = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TaskDTOTaskID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Comments", x => x.CommentID);
                     table.ForeignKey(
-                        name: "FK_Comments_Tasks_TaskID",
-                        column: x => x.TaskID,
+                        name: "FK_Comments_Tasks_TaskDTOTaskID",
+                        column: x => x.TaskDTOTaskID,
                         principalTable: "Tasks",
                         principalColumn: "TaskID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comments_TaskID",
+                name: "IX_Comments_TaskDTOTaskID",
                 table: "Comments",
-                column: "TaskID");
+                column: "TaskDTOTaskID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

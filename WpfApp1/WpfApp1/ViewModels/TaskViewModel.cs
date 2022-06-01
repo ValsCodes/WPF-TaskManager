@@ -5,10 +5,9 @@ using WpfApp1.Models;
 
 namespace WpfApp1.ViewModels
 {
-    class TaskViewModel : ViewModelBase
+    public class TaskViewModel : ViewModelBase
     {
         private readonly Task _task;
-        public string TaskID => _task.TaskID.ToString();
         public string TaskName => _task.TaskName;
         public DateTime DateCreated => _task.DateCreated.Date;
         public string Description => _task.Description;

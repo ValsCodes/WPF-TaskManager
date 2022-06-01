@@ -9,8 +9,6 @@ namespace WpfApp1.Models
     {
         [Key]
         public string CommentID { get; set; }
-        [Required]
-        public int TaskID { get; set; }
         public string UserID { get; set; }
         public DateTime DateAdded => DateTime.Now;
         public string Comment { get; set; }

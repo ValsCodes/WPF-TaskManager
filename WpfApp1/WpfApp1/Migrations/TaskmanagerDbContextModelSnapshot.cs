@@ -19,31 +19,7 @@ namespace WpfApp1.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("WpfApp1.Models.Comments", b =>
-                {
-                    b.Property<string>("CommentID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Comment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TaskID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Type")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserID")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CommentID");
-
-                    b.HasIndex("TaskID");
-
-                    b.ToTable("Comments");
-                });
-
-            modelBuilder.Entity("WpfApp1.Models.Task", b =>
+            modelBuilder.Entity("WpfApp1.DTOs.TaskDTO", b =>
                 {
                     b.Property<int>("TaskID")
                         .ValueGeneratedOnAdd()
@@ -52,6 +28,9 @@ namespace WpfApp1.Migrations
 
                     b.Property<string>("Assigned")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -75,14 +54,36 @@ namespace WpfApp1.Migrations
 
             modelBuilder.Entity("WpfApp1.Models.Comments", b =>
                 {
-                    b.HasOne("WpfApp1.Models.Task", null)
-                        .WithMany("Comments")
-                        .HasForeignKey("TaskID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<string>("CommentID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TaskDTOTaskID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CommentID");
+
+                    b.HasIndex("TaskDTOTaskID");
+
+                    b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("WpfApp1.Models.Task", b =>
+            modelBuilder.Entity("WpfApp1.Models.Comments", b =>
+                {
+                    b.HasOne("WpfApp1.DTOs.TaskDTO", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("TaskDTOTaskID");
+                });
+
+            modelBuilder.Entity("WpfApp1.DTOs.TaskDTO", b =>
                 {
                     b.Navigation("Comments");
                 });

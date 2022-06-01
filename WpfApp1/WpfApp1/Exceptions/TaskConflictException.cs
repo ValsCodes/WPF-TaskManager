@@ -28,6 +28,10 @@ namespace WpfApp1.Exceptions
             ExistingTask = existingTask;
             IncomingTask = incomingTask;
         }
+        public TaskConflictException() : base()
+        {
+
+        }
     }
 }
     

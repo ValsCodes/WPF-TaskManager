@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp1.DTOs;
 using WpfApp1.Models;
 
 namespace WpfApp1.DbContexts
@@ -15,6 +16,7 @@ namespace WpfApp1.DbContexts
 
         }
 
-        public DbSet<WpfApp1.Models.Task> Tasks { get; set; }
+        public DbSet<TaskDTO> Tasks { get; set; }
+        public DbSet<Comments> Comments { get; set; }
     }
 }
