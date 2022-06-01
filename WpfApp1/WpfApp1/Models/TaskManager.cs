@@ -8,7 +8,7 @@ namespace WpfApp1.Models
 {
     public class TaskManager
     {
-        private readonly List<Task> _tasks;
+        private readonly ICollection<Task> _tasks;
         public TaskManager()
         {
             _tasks = new List<Task>();
@@ -17,6 +17,11 @@ namespace WpfApp1.Models
         public IEnumerable<Task> GetTaskForUser(string username)
         {
             return _tasks.Where(x => x.UserID == username);
+        }
+
+        public IEnumerable<Task> GetAllTasks()
+        {
+            return _tasks;
         }
 
         public void AddTask(Task task)

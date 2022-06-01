@@ -1,0 +1,8 @@
+C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.csprojAssemblyReference.cache
+C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\Views\Tasks\Create.g.cs
+C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\Views\Tasks\Index.g.cs
+C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\TaskManagerWPF_MarkupCompile.cache
+C:\Users\Val\Documents\GitHub\WPF-TaskManager\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\TaskManagerWPF_MarkupCompile.lref

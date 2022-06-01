@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows;
 using WpfApp1.Exceptions;
 using WpfApp1.Models;
+using WpfApp1.Service;
 using WpfApp1.ViewModels;
 
 namespace WpfApp1.Commands
@@ -12,12 +13,13 @@ namespace WpfApp1.Commands
     {
         private readonly MakeTaskViewModel _makeTaskViewModel;
         private readonly TaskManager _taskManager;
+        private readonly NavigationService _taskViewNavigationService;
 
-
-        public MakeTaskCommand(MakeTaskViewModel makeTaskViewModel, TaskManager manager)
+        public MakeTaskCommand(MakeTaskViewModel makeTaskViewModel, TaskManager manager, NavigationService taskViewNavigationService)
         {
             _taskManager = manager;
             _makeTaskViewModel = makeTaskViewModel;
+            _taskViewNavigationService = taskViewNavigationService;
         }
         public override void Execute(object parameter)
         {
@@ -34,6 +36,7 @@ namespace WpfApp1.Commands
                 _taskManager.AddTask(task);
                 MessageBox.Show("Successfully added task", "Success",
                      MessageBoxButton.OK, MessageBoxImage.Information);
+                _taskViewNavigationService.Navigate();
             }
             catch (TaskConflictException)
             {

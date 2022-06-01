@@ -7,8 +7,8 @@ namespace WpfApp1.Models
 {
     public class Task
     {
-        protected static int autoicrementid = 1;
-        //[Key]
+       // protected static int autoicrementid = 1;
+        [Key]
         public string TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime DateCreated => DateTime.Now;
@@ -17,14 +17,12 @@ namespace WpfApp1.Models
         public string Type { get; set; }
         public string UserID { get; set; }
         public DateTime NextAction { get; set; }
-
-
-        public List<Comments> Comments;
+        public ICollection<Comments> Comments { get; set; }
 
 
         public Task(string name, string desc, string status, string type, string userid, DateTime next)
         {
-            this.TaskID =  autoicrementid++.ToString();
+         //   this.TaskID =  autoicrementid++.ToString();
             this.TaskName = name;
             this.Description = desc;
             this.Status = status;
@@ -33,9 +31,9 @@ namespace WpfApp1.Models
             this.NextAction = next;
         }
 
-        public Task(string taskid, string name, string desc, string status, string type, string userid, DateTime next, Comments comment)
+        public Task(string name, string desc, string status, string type, string userid, DateTime next, Comments comment)
         {
-            this.TaskID = taskid;
+          //  this.TaskID = taskid;
             this.TaskName = name;
             this.Description = desc;
             this.Status = status;

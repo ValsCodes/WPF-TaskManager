@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using System.Text;
 using WpfApp1.Models;
+using WpfApp1.Stores;
 
 namespace WpfApp1.ViewModels
 {
      class MainViewModel : ViewModelBase
-    {
-        public ViewModelBase CurrentViewModel { get; }
-         
-        public MainViewModel(TaskManager manager)
+    {      
+        private readonly NavigationStore _navigationStore;
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
+        public MainViewModel(NavigationStore navigationStore)
         {
-            CurrentViewModel = new MakeTaskViewModel(manager);
+            _navigationStore = navigationStore;
+
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
         }
-        
-        /*
-        public MainViewModel()
+
+        private void OnCurrentViewModelChanged()
         {
-            CurrentViewModel = new TaskListingViewModel();
+            OnPropertyChanged(nameof(CurrentViewModel));
         }
-        */
     }
 }

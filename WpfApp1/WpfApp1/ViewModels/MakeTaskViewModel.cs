@@ -4,6 +4,8 @@ using System.Text;
 using System.Windows.Input;
 using WpfApp1.Commands;
 using WpfApp1.Models;
+using WpfApp1.Stores;
+using WpfApp1.Service;
 
 namespace WpfApp1.ViewModels
 {
@@ -61,9 +63,10 @@ namespace WpfApp1.ViewModels
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public MakeTaskViewModel(TaskManager manager)
+        public MakeTaskViewModel(TaskManager manager, NavigationService taskViewNavigationService)
         {
-            SubmitCommand = new MakeTaskCommand(this, manager);
+            SubmitCommand = new MakeTaskCommand(this, manager, taskViewNavigationService);
+            CancelCommand = new NavigateCommand(taskViewNavigationService);
         }
 
     }

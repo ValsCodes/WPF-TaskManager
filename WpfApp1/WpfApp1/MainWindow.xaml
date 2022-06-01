@@ -5,11 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1" 
         xmlns:views="clr-namespace:WpfApp1.Views.Tasks"
+        xmlns:vms="clr-namespace:WpfApp1.ViewModels"
         FontSize="12"
         mc:Ignorable="d"
         Title="TeskManager" Height="450" Width="800">
- 
+
     <Grid Margin="20 10 0 0 " MaxWidth="600">
-        <views:Create DataContext="{Binding CurrentViewModel}"/>
+
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type vms:MakeTaskViewModel}">
+                <views:Create/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:TaskListingViewModel}">
+                <views:Index/>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>
