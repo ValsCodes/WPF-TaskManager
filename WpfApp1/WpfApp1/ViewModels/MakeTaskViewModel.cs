@@ -46,7 +46,7 @@ namespace WpfApp1.ViewModels
             set { _type = value; OnPropertyChanged(nameof(Type)); }
         }
 
-        private DateTime _nextAction;
+        private DateTime _nextAction = DateTime.Now;
         public DateTime NextAction
         {
             get { return _nextAction; }
