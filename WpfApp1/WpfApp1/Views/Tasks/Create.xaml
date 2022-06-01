@@ -117,6 +117,8 @@
                 <ComboBoxItem Content = "Visual"/>
                 <ComboBoxItem Content = "Quality"/>
             </ComboBox>
+            
+            
         </Grid>
 
         <Grid Grid.Row="5">

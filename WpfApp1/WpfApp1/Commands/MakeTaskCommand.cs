@@ -23,7 +23,7 @@ namespace WpfApp1.Commands
         }
         public override void Execute(object parameter)
         {
-            Task task = new Task(
+            Models.Task task = new Models.Task(
                 _makeTaskViewModel.TaskName, 
                 _makeTaskViewModel.Description,
                 _makeTaskViewModel.Status,

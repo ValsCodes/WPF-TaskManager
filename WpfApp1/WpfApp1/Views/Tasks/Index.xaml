@@ -56,7 +56,7 @@
                     <GridViewColumn  Header="Date Created">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding DateCreated}"/>   <!-- SUS check if date created doesn't func or changes-->
+                                <TextBlock Text="{Binding DateCreated}"/> 
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -85,10 +85,10 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn  Header="UserName">
+                    <GridViewColumn  Header="Assigned">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding UserID}"/>
+                                <TextBlock Text="{Binding Assigned}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
